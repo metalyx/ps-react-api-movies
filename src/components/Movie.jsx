@@ -8,9 +8,11 @@ const Movie = ({ movie }) => {
     const onOver = () => {
         setStyleOnHover('underline');
     };
+
     const onOut = () => {
         setStyleOnHover('');
     };
+
     const getValidatedSrc = (src) => {
         if (src === 'N/A') {
             return noImageIcon;
@@ -20,11 +22,11 @@ const Movie = ({ movie }) => {
     };
 
     return (
-        <Tilt>
+        <Tilt options={{ scale: 1, reverse: true }}>
             <div
                 onMouseOver={onOver}
                 onMouseOut={onOut}
-                className={`cursor-pointer shadow-md p-6 border rounded flex flex-col items-center h-full bg-gradient-to-r from-violet-600 to-indigo-600`}
+                className={` cursor-pointer shadow-md p-6 rounded flex flex-col items-center h-full bg-gradient-to-r from-green-600 to-green-700`}
             >
                 <img
                     className='h-[200px] w-[200px] object-contain'

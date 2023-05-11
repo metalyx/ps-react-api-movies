@@ -21,16 +21,26 @@ const Form = () => {
     return (
         <form
             onSubmit={(e) => handleSearch(e)}
-            className='flex flex-col w-[300px] items-center'
+            className='flex flex-col w-[300px] items-center self-start'
         >
-            <label htmlFor='movieTitle'>Movie title</label>
-            <input
-                id='movieTitle'
-                value={movieTitle}
-                onChange={(e) => setMovieTitle(e.target.value)}
-                className='border-2 rounded border-black'
-            />
-            <button type='submit'>Search</button>
+            <div className='flex flex-col self-start'>
+                <label htmlFor='movieTitle' className='self-start'>
+                    Movie title
+                </label>
+                <input
+                    id='movieTitle'
+                    value={movieTitle}
+                    onChange={(e) => setMovieTitle(e.target.value)}
+                    className='border-2 rounded border-black px-4 py-2 font-bold'
+                />
+            </div>
+
+            <button
+                type='submit'
+                className='hover:bg-zinc-700 transition-all bg-zinc-900 text-white px-4 py-1 mt-3 font-bold text-lg self-start'
+            >
+                Add
+            </button>
         </form>
     );
 };
